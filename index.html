@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>簡易ホームページ作成フォーム</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=M+PLUS+1p:wght@400;500;700&family=Roboto:wght@400;500;700&family=Dancing+Script&family=Pacifico&family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="nav-header">
+        <div class="container">
+            <a href="#" class="logo">
+                <span>🎨</span> Site Generator
+            </a>
+            <nav>
+                <a href="#features">特徴</a>
+                <a href="#problems">課題</a>
+                <a href="#services">サービス</a>
+                <a href="#steps">使い方</a>
+                <a href="#generator">作成開始</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="container">
+            <h2>たった5分でプロフェッショナルな<br>ホームページが完成</h2>
+            <p>面倒な技術的な知識は不要。必要な情報を入力するだけで、あなたのビジネスにぴったりのホームページが作成できます。デザインや構成も自動で最適化されるので、すぐにオンラインでの集客を始められます。</p>
+        </div>
+    </section>
+
+    <section id="problems" class="service-section">
+        <div class="container">
+            <h2>こんな課題はありませんか？</h2>
+            <p class="subtitle">多くの事業者様が抱える、ホームページ作成の悩み</p>
+            <div class="problem-list">
+                <div class="problem-item">
+                    <div class="number">1</div>
+                    <div class="content">
+                        <h3>制作費用が高い</h3>
+                        <p>専門業者に依頼すると、数十万円もの費用がかかってしまう</p>
+                    </div>
+                </div>
+                <div class="problem-item">
+                    <div class="number">2</div>
+                    <div class="content">
+                        <h3>時間がかかる</h3>
+                        <p>打ち合わせや修正を重ねるため、完成までに数ヶ月かかる</p>
+                    </div>
+                </div>
+                <div class="problem-item">
+                    <div class="number">3</div>
+                    <div class="content">
+                        <h3>技術的な知識が必要</h3>
+                        <p>HTMLやCSSなどの専門知識がないと、自分では作れない</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="service-section">
+        <div class="container">
+            <h2>サービスの特徴</h2>
+            <p class="subtitle">簡単操作で、プロ品質のホームページを作成</p>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <div class="icon">⚡️</div>
+                    <h3>スピード作成</h3>
+                    <p>必要な情報を入力するだけで、5分程度で完成。すぐにオンライン公開が可能です。</p>
+                </div>
+                <div class="feature-item">
+                    <div class="icon">💡</div>
+                    <h3>最適なデザイン</h3>
+                    <p>業種や目的に合わせて、最適なデザインを自動で提案。プロ品質のサイトが完成します。</p>
+                </div>
+                <div class="feature-item">
+                    <div class="icon">📱</div>
+                    <h3>スマホ対応</h3>
+                    <p>全てのデバイスで美しく表示。スマートフォンでも最適な表示が可能です。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="steps" class="service-section">
+        <div class="container">
+            <h2>簡単3ステップで完成</h2>
+            <p class="subtitle">どなたでも簡単に作成できます</p>
+            <div class="service-detail">
+                <img src="https://placehold.co/600x400" alt="使い方の説明">
+                <div class="content">
+                    <h3>必要な情報を入力するだけ</h3>
+                    <p>ホームページ作成に必要な情報を、順番に入力していくだけ。専門知識は一切必要ありません。</p>
+                    <ul>
+                        <li>業種や目的を選択</li>
+                        <li>基本情報を入力</li>
+                        <li>必要なコンテンツを選択</li>
+                        <li>内容を確認して完成</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="generator" class="service-section">
+        <div class="container">
+            <header class="main-header">
+                <h1>ホームページを作成する</h1>
+                <p>必要な情報を入力して、あなたのホームページを生成しましょう</p>
+            </header>
+
+            <div id="form-section">
+                <div id="form-content">
+                    <div class="form-group">
+                        <label for="industry">業種:</label>
+                        <select id="industry" name="industry">
+                            <option value="">業種を選択してください</option>
+                            <option value="restaurant">飲食店</option>
+                            <option value="retail">小売店</option>
+                            <option value="beauty">美容院・サロン</option>
+                            <option value="medical">医療・健康</option>
+                            <option value="education">教育・学習</option>
+                            <option value="realestate">不動産</option>
+                            <option value="construction">建設・リフォーム</option>
+                            <option value="fitness">フィットネス・スポーツ</option>
+                            <option value="professional">専門サービス（税理士・弁護士等）</option>
+                            <option value="other">その他</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="purpose">サイトの目的:</label>
+                        <select id="purpose" name="purpose">
+                            <option value="">目的を選択してください</option>
+                            <option value="new_customers">新規顧客の獲得</option>
+                            <option value="branding">ブランディング・認知度向上</option>
+                            <option value="information">情報発信・お知らせ</option>
+                            <option value="sales">商品・サービスの販売促進</option>
+                            <option value="reservation">予約・問い合わせの受付</option>
+                            <option value="recruitment">採用・人材募集</option>
+                            <option value="portfolio">実績・ポートフォリオの紹介</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="color">カラーテーマ:</label>
+                        <select id="color" name="color">
+                            <option value="">カラーテーマを選択してください</option>
+                            <optgroup label="ベーシック">
+                                <option value="#4f46e5">ブルー</option>
+                                <option value="#16a34a">グリーン</option>
+                                <option value="#dc2626">レッド</option>
+                                <option value="#2d3748">ダークグレー</option>
+                            </optgroup>
+                            <optgroup label="ビジネス">
+                                <option value="#1e40af">ネイビー</option>
+                                <option value="#064e3b">ダークグリーン</option>
+                                <option value="#3730a3">インディゴ</option>
+                                <option value="#7e22ce">パープル</option>
+                            </optgroup>
+                            <optgroup label="カジュアル">
+                                <option value="#ea580c">オレンジ</option>
+                                <option value="#db2777">ピンク</option>
+                                <option value="#ca8a04">イエロー</option>
+                                <option value="#0d9488">ターコイズ</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="catchphrase">キャッチフレーズ:</label>
+                        <input type="text" id="catchphrase" name="catchphrase" placeholder="例：心を込めたサービスをお届けします">
+                    </div>
+                    <div class="form-group">
+                        <label>必要なコンテンツ:</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" name="content" value="店舗紹介"> 店舗紹介</label>
+                            <label><input type="checkbox" name="content" value="メニュー/商品紹介"> メニュー/商品紹介</label>
+                            <label><input type="checkbox" name="content" value="お知らせ"> お知らせ</label>
+                            <label><input type="checkbox" name="content" value="アクセス"> アクセス</label>
+                            <label><input type="checkbox" name="content" value="問い合わせ"> 問い合わせ</label>
+                            <label><input type="checkbox" name="content" value="SNSリンク"> SNSリンク</label>
+                        </div>
+                    </div>
+                    <div id="content-details" class="form-group">
+                    </div>
+                    <button id="generate-button" onclick="generateMockup()">モックアップを生成</button>
+                </div>
+            </div>
+
+            <div id="preview-section">
+                <div class="preview-header">
+                    <h2>プレビュー</h2>
+                    <div class="preview-controls">
+                        <button id="save-button" class="preview-button">💾 保存</button>
+                        <button id="load-button" class="preview-button">📂 読み込み</button>
+                        <button id="toggle-history" class="preview-button">📋 履歴</button>
+                        <select id="font-selector" class="preview-select">
+                            <option value="">フォントを選択</option>
+                            <optgroup label="日本語フォント">
+                                <option value="'Yu Gothic', sans-serif">游ゴシック</option>
+                                <option value="'Hiragino Kaku Gothic ProN', sans-serif">ヒラギノ角ゴ</option>
+                                <option value="'MS PGothic', sans-serif">MSPゴシック</option>
+                                <option value="'Noto Sans JP', sans-serif">Noto Sans JP</option>
+                                <option value="'M PLUS 1p', sans-serif">M PLUS 1p</option>
+                            </optgroup>
+                            <optgroup label="英語フォント">
+                                <option value="Arial, sans-serif">Arial</option>
+                                <option value="'Helvetica Neue', Helvetica, sans-serif">Helvetica</option>
+                                <option value="'Times New Roman', serif">Times New Roman</option>
+                                <option value="Georgia, serif">Georgia</option>
+                                <option value="'Roboto', sans-serif">Roboto</option>
+                            </optgroup>
+                            <optgroup label="装飾フォント">
+                                <option value="'Dancing Script', cursive">Dancing Script</option>
+                                <option value="'Pacifico', cursive">Pacifico</option>
+                                <option value="'Great Vibes', cursive">Great Vibes</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                </div>
+                <div id="mockup-container"></div>
+                <div id="version-sidebar">
+                    <h3>バージョン履歴</h3>
+                    <ul id="version-history-list"></ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/form.js"></script>
+    <script src="js/mockup.js"></script>
+    <script src="js/version-control.js"></script>
+</body>
+</html> 
