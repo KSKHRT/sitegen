@@ -173,6 +173,53 @@
                         <input type="text" id="catchphrase" name="catchphrase" placeholder="例：心を込めたサービスをお届けします">
                     </div>
                     <div class="form-group">
+                        <label for="business-name">事業者名:</label>
+                        <input type="text" id="business-name" name="business-name" placeholder="例：〇〇商店">
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-info">連絡先情報:</label>
+                        <div class="contact-fields">
+                            <input type="tel" id="phone" name="phone" placeholder="電話番号">
+                            <input type="email" id="email" name="email" placeholder="メールアドレス">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="business-hours">営業時間:</label>
+                        <div class="hours-fields">
+                            <input type="text" id="weekday-hours" name="weekday-hours" placeholder="平日の営業時間（例：9:00-18:00）">
+                            <input type="text" id="weekend-hours" name="weekend-hours" placeholder="土日祝の営業時間">
+                            <input type="text" id="holiday" name="holiday" placeholder="定休日">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">所在地:</label>
+                        <input type="text" id="postal-code" name="postal-code" placeholder="郵便番号">
+                        <input type="text" id="address" name="address" placeholder="住所">
+                    </div>
+                    <div class="form-group">
+                        <label for="meta-description">サイトの説明文:</label>
+                        <textarea id="meta-description" name="meta-description" placeholder="検索結果に表示される説明文（120文字程度）" maxlength="120"></textarea>
+                        <small class="help-text">※検索エンジン最適化（SEO）に使用されます</small>
+                    </div>
+                    <div class="form-group">
+                        <label>SNSアカウント:</label>
+                        <div class="sns-fields">
+                            <input type="url" id="facebook" name="facebook" placeholder="Facebookページ URL">
+                            <input type="url" id="instagram" name="instagram" placeholder="Instagram URL">
+                            <input type="url" id="twitter" name="twitter" placeholder="Twitter URL">
+                            <input type="url" id="line" name="line" placeholder="LINE公式アカウント URL">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="payment-methods">利用可能な支払い方法:</label>
+                        <div class="checkbox-group payment-methods">
+                            <label><input type="checkbox" name="payment" value="cash"> 現金</label>
+                            <label><input type="checkbox" name="payment" value="credit-card"> クレジットカード</label>
+                            <label><input type="checkbox" name="payment" value="electronic-money"> 電子マネー</label>
+                            <label><input type="checkbox" name="payment" value="qr-code"> QRコード決済</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
                         <label>必要なコンテンツ:</label>
                         <div class="checkbox-group">
                             <label><input type="checkbox" name="content" value="店舗紹介"> 店舗紹介</label>
@@ -189,41 +236,65 @@
                 </div>
             </div>
 
+            <!-- モーダルオーバーレイ -->
+            <div id="preview-modal" class="modal-overlay">
+                <div class="modal">
+                    <div class="modal-header">
+                        <h2 class="modal-title">プレビュー</h2>
+                        <div class="modal-controls">
+                            <button id="save-button" class="preview-button">💾 保存</button>
+                            <button id="load-button" class="preview-button">📂 読み込み</button>
+                            <button id="toggle-history" class="preview-button">📋 履歴</button>
+                            <select id="font-selector" class="preview-select">
+                                <option value="">フォントを選択</option>
+                                <optgroup label="日本語フォント">
+                                    <option value="'Yu Gothic', sans-serif">游ゴシック</option>
+                                    <option value="'Hiragino Kaku Gothic ProN', sans-serif">ヒラギノ角ゴ</option>
+                                    <option value="'MS PGothic', sans-serif">MSPゴシック</option>
+                                    <option value="'Noto Sans JP', sans-serif">Noto Sans JP</option>
+                                    <option value="'M PLUS 1p', sans-serif">M PLUS 1p</option>
+                                </optgroup>
+                                <optgroup label="英語フォント">
+                                    <option value="Arial, sans-serif">Arial</option>
+                                    <option value="'Helvetica Neue', Helvetica, sans-serif">Helvetica</option>
+                                    <option value="'Times New Roman', serif">Times New Roman</option>
+                                    <option value="Georgia, serif">Georgia</option>
+                                    <option value="'Roboto', sans-serif">Roboto</option>
+                                </optgroup>
+                                <optgroup label="装飾フォント">
+                                    <option value="'Dancing Script', cursive">Dancing Script</option>
+                                    <option value="'Pacifico', cursive">Pacifico</option>
+                                    <option value="'Great Vibes', cursive">Great Vibes</option>
+                                </optgroup>
+                            </select>
+                            <button class="modal-close">×</button>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <div id="mockup-container"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- バージョン履歴モーダル -->
+            <div id="version-history-modal" class="modal-overlay">
+                <div class="modal version-modal">
+                    <div class="modal-header">
+                        <h2 class="modal-title">バージョン履歴</h2>
+                        <button class="modal-close">×</button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="version-history-container">
+                            <ul id="version-history-list"></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div id="preview-section">
                 <div class="preview-header">
                     <h2>プレビュー</h2>
-                    <div class="preview-controls">
-                        <button id="save-button" class="preview-button">💾 保存</button>
-                        <button id="load-button" class="preview-button">📂 読み込み</button>
-                        <button id="toggle-history" class="preview-button">📋 履歴</button>
-                        <select id="font-selector" class="preview-select">
-                            <option value="">フォントを選択</option>
-                            <optgroup label="日本語フォント">
-                                <option value="'Yu Gothic', sans-serif">游ゴシック</option>
-                                <option value="'Hiragino Kaku Gothic ProN', sans-serif">ヒラギノ角ゴ</option>
-                                <option value="'MS PGothic', sans-serif">MSPゴシック</option>
-                                <option value="'Noto Sans JP', sans-serif">Noto Sans JP</option>
-                                <option value="'M PLUS 1p', sans-serif">M PLUS 1p</option>
-                            </optgroup>
-                            <optgroup label="英語フォント">
-                                <option value="Arial, sans-serif">Arial</option>
-                                <option value="'Helvetica Neue', Helvetica, sans-serif">Helvetica</option>
-                                <option value="'Times New Roman', serif">Times New Roman</option>
-                                <option value="Georgia, serif">Georgia</option>
-                                <option value="'Roboto', sans-serif">Roboto</option>
-                            </optgroup>
-                            <optgroup label="装飾フォント">
-                                <option value="'Dancing Script', cursive">Dancing Script</option>
-                                <option value="'Pacifico', cursive">Pacifico</option>
-                                <option value="'Great Vibes', cursive">Great Vibes</option>
-                            </optgroup>
-                        </select>
-                    </div>
-                </div>
-                <div id="mockup-container"></div>
-                <div id="version-sidebar">
-                    <h3>バージョン履歴</h3>
-                    <ul id="version-history-list"></ul>
+                    <button id="show-preview" class="preview-button">プレビューを表示</button>
                 </div>
             </div>
         </div>
