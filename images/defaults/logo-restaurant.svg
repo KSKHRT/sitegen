@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="60" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .logo-text { font-family: 'Noto Sans JP', sans-serif; font-weight: 700; }
+    .icon { fill: currentColor; }
+  </style>
+  <g fill="currentColor">
+    <path d="M30 15c-1.1 0-2 .9-2 2v26c0 1.1.9 2 2 2h2v-11h8v11h2c1.1 0 2-.9 2-2V17c0-1.1-.9-2-2-2H30zm2 4h8v11h-8V19z"/>
+    <path d="M20 15v30h4V35c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2v10h4V15H20z"/>
+  </g>
+  <text x="60" y="38" class="logo-text" font-size="24">Restaurant</text>
+</svg> 

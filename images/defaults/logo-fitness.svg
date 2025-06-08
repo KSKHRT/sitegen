@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="60" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .logo-text { font-family: 'Noto Sans JP', sans-serif; font-weight: 700; }
+    .icon { fill: currentColor; }
+  </style>
+  <g fill="currentColor">
+    <path d="M15 25v10h4v-10h-4zm26 0v10h4v-10h-4z"/>
+    <path d="M21 22v16h2V22h-2zm16 0v16h2V22h-2z"/>
+    <path d="M25 27v6h10v-6H25z"/>
+  </g>
+  <text x="60" y="38" class="logo-text" font-size="24">Fitness</text>
+</svg> 
