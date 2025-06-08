@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="60" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .logo-text { font-family: 'Noto Sans JP', sans-serif; font-weight: 700; }
+    .icon { fill: currentColor; }
+  </style>
+  <g fill="currentColor">
+    <path d="M30 15L15 30h5v15h20V30h5L30 15zm-6 19h6v6h-6v-6zm8 0h6v6h-6v-6z"/>
+  </g>
+  <text x="60" y="38" class="logo-text" font-size="24">Real Estate</text>
+</svg> 

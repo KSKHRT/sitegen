@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="60" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .logo-text { font-family: 'Noto Sans JP', sans-serif; font-weight: 700; }
+    .icon { fill: currentColor; }
+  </style>
+  <g fill="currentColor">
+    <path d="M25 15v6h10v-6H25zm-7 8v22h24V23H18zm4 4h16v6H22v-6z"/>
+  </g>
+  <text x="60" y="38" class="logo-text" font-size="24">Professional</text>
+</svg> 

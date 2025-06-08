@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="60" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .logo-text { font-family: 'Noto Sans JP', sans-serif; font-weight: 700; }
+    .icon { fill: currentColor; }
+  </style>
+  <g fill="currentColor">
+    <path d="M25 15l-5 10v20c0 2.2 1.8 4 4 4h12c2.2 0 4-1.8 4-4V25l-5-10H25zm1 4h8l3 6H23l3-6z"/>
+    <path d="M23 29h14v12H23V29z"/>
+  </g>
+  <text x="60" y="38" class="logo-text" font-size="24">Shop</text>
+</svg> 

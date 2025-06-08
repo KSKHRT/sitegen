@@ -148,23 +148,23 @@
                         <label for="color">カラーテーマ:</label>
                         <select id="color" name="color">
                             <option value="">カラーテーマを選択してください</option>
-                            <optgroup label="ベーシック">
-                                <option value="#4f46e5">ブルー</option>
-                                <option value="#16a34a">グリーン</option>
-                                <option value="#dc2626">レッド</option>
-                                <option value="#2d3748">ダークグレー</option>
+                            <optgroup label="ナチュラル">
+                                <option value="#94a3b8">ソフトグレー</option>
+                                <option value="#93c5fd">ペールブルー</option>
+                                <option value="#86efac">ミントグリーン</option>
+                                <option value="#fde68a">ライトイエロー</option>
                             </optgroup>
-                            <optgroup label="ビジネス">
-                                <option value="#1e40af">ネイビー</option>
-                                <option value="#064e3b">ダークグリーン</option>
-                                <option value="#3730a3">インディゴ</option>
-                                <option value="#7e22ce">パープル</option>
+                            <optgroup label="パステル">
+                                <option value="#f9a8d4">ソフトピンク</option>
+                                <option value="#c4b5fd">ラベンダー</option>
+                                <option value="#a5b4fc">アイスブルー</option>
+                                <option value="#99f6e4">アクアミント</option>
                             </optgroup>
-                            <optgroup label="カジュアル">
-                                <option value="#ea580c">オレンジ</option>
-                                <option value="#db2777">ピンク</option>
-                                <option value="#ca8a04">イエロー</option>
-                                <option value="#0d9488">ターコイズ</option>
+                            <optgroup label="アース">
+                                <option value="#d6d3d1">ウォームグレー</option>
+                                <option value="#fcd34d">ハニーゴールド</option>
+                                <option value="#d4b996">ベージュ</option>
+                                <option value="#bec5ad">セージ</option>
                             </optgroup>
                         </select>
                     </div>
@@ -202,15 +202,6 @@
                         <small class="help-text">※検索エンジン最適化（SEO）に使用されます</small>
                     </div>
                     <div class="form-group">
-                        <label>SNSアカウント:</label>
-                        <div class="sns-fields">
-                            <input type="url" id="facebook" name="facebook" placeholder="Facebookページ URL">
-                            <input type="url" id="instagram" name="instagram" placeholder="Instagram URL">
-                            <input type="url" id="twitter" name="twitter" placeholder="Twitter URL">
-                            <input type="url" id="line" name="line" placeholder="LINE公式アカウント URL">
-                        </div>
-                    </div>
-                    <div class="form-group">
                         <label for="payment-methods">利用可能な支払い方法:</label>
                         <div class="checkbox-group payment-methods">
                             <label><input type="checkbox" name="payment" value="cash"> 現金</label>
@@ -232,6 +223,15 @@
                     </div>
                     <div id="content-details" class="form-group">
                     </div>
+                    <div id="sns-fields" class="form-group" style="display: none;">
+                        <label>SNSアカウント:</label>
+                        <div class="sns-fields">
+                            <input type="url" id="facebook" name="facebook" placeholder="Facebookページ URL">
+                            <input type="url" id="instagram" name="instagram" placeholder="Instagram URL">
+                            <input type="url" id="twitter" name="twitter" placeholder="Twitter URL">
+                            <input type="url" id="line" name="line" placeholder="LINE公式アカウント URL">
+                        </div>
+                    </div>
                     <button id="generate-button" onclick="generateMockup()">モックアップを生成</button>
                 </div>
             </div>
@@ -242,9 +242,6 @@
                     <div class="modal-header">
                         <h2 class="modal-title">プレビュー</h2>
                         <div class="modal-controls">
-                            <button id="save-button" class="preview-button">💾 保存</button>
-                            <button id="load-button" class="preview-button">📂 読み込み</button>
-                            <button id="toggle-history" class="preview-button">📋 履歴</button>
                             <select id="font-selector" class="preview-select">
                                 <option value="">フォントを選択</option>
                                 <optgroup label="日本語フォント">
@@ -276,21 +273,6 @@
                 </div>
             </div>
 
-            <!-- バージョン履歴モーダル -->
-            <div id="version-history-modal" class="modal-overlay">
-                <div class="modal version-modal">
-                    <div class="modal-header">
-                        <h2 class="modal-title">バージョン履歴</h2>
-                        <button class="modal-close">×</button>
-                    </div>
-                    <div class="modal-body">
-                        <div id="version-history-container">
-                            <ul id="version-history-list"></ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
             <div id="preview-section">
                 <div class="preview-header">
                     <h2>プレビュー</h2>
@@ -302,6 +284,5 @@
 
     <script src="js/form.js"></script>
     <script src="js/mockup.js"></script>
-    <script src="js/version-control.js"></script>
 </body>
 </html> 
